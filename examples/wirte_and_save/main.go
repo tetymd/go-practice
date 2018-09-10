@@ -3,6 +3,7 @@ package main
 import (
     "fmt"
     "os"
+    "bufio"
     "io/ioutil"
 )
 
@@ -33,6 +34,14 @@ func main() {
     }
     defer file.Close()
     file.Write(([]byte) (output))
+
+    // 標準入力から読み込み
+    scanner := bufio.NewScanner(os.Stdin)
+    scanner.Scan()
+    fmt.Println(scanner.Text())
+    if err := scanner.Err(); err != nil {
+        fmt.Fprintln(os.Stderr, "reading standard input:", err)
+    }
 
     // ファイルを読み込み
     data, err := ioutil.ReadFile(file_name)
