@@ -18,6 +18,7 @@ func main() {
     defer t.Close()
     fmt.Println(p, t)
 
+    // ptsに書き込み＆読み込み
     buf := make([]byte, 1024)
     p.Write([]byte("\x1b[2J"))
     n, err := p.Read(buf)
