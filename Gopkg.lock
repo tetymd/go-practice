@@ -18,6 +18,22 @@
   version = "v1.1.2"
 
 [[projects]]
+  digest = "1:cdb899c199f907ac9fb50495ec71212c95cb5b0e0a8ee0800da0238036091033"
+  name = "github.com/mattn/go-runewidth"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "ce7b0b5c7b45a81508558cd1dba6bb1e4ddb51bb"
+  version = "v0.0.3"
+
+[[projects]]
+  branch = "master"
+  digest = "1:f335d800550786b6f51ddaedb9d1107a7a72f4a2195e5b039dd7c0e103e119bc"
+  name = "github.com/nsf/termbox-go"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "b66b20ab708e289ff1eb3e218478302e6aec28ce"
+
+[[projects]]
   branch = "master"
   digest = "1:3f3a05ae0b95893d90b9b3b5afdb79a9b3d96e4e36e099d841ae602e4aca0da8"
   name = "golang.org/x/crypto"
@@ -42,6 +58,7 @@
   input-imports = [
     "github.com/ahmetalpbalkan/go-cursor",
     "github.com/kr/pty",
+    "github.com/nsf/termbox-go",
     "golang.org/x/crypto/ssh/terminal",
   ]
   solver-name = "gps-cdcl"
